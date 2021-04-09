@@ -1,17 +1,13 @@
 import firebase from "firebase";
 
-var firebaseConfig = {
-    apiKey: "AIzaSyA8wKcwnulYOVjlpXUH1HmlTdR_OT7YbCY",
-    authDomain: "resume-builder-9b463.firebaseapp.com",
-    projectId: "resume-builder-9b463",
-    storageBucket: "resume-builder-9b463.appspot.com",
-    messagingSenderId: "161099095587",
-    appId: "1:161099095587:web:e852a8a3621b6459be5b96"
-  };
+const firebaseConfig = {
+  apiKey: "AIzaSyDR9YXHTv8ljP5cssmJBuHuHfSBeR81To4",
+  authDomain: "resume-builder-c0802.firebaseapp.com",
+  projectId: "resume-builder-c0802",
+  storageBucket: "resume-builder-c0802.appspot.com",
+  messagingSenderId: "845699477242",
+  appId: "1:845699477242:web:6f49315325880abe88a343"
+};
 
-const firebaseApp = firebase.initializeApp(firebaseConfig);
-
-
-export default{
-    db : firebaseApp.firestore()
-}
+let firebaseApp = firebase.initializeApp(firebaseConfig);
+export default firebaseApp;

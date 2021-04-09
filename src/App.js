@@ -16,13 +16,27 @@ class App extends Component {
 
     // get a document
 
-    firebaseApp.db.collection("resumes").doc("8EcRZLwkbUfG2XNgKG2Z").get().then( doc =>{
+    
+
+    firebaseApp.firestore().collection("resumes").doc("OBDBEgMQp6Z69BAYnDxc").get().then( doc =>{
       console.log(doc.data());
     })
     
   }
+  addData = () =>{
+    console.log("insie the addData")
+    firebaseApp.firestore().collection("resumes").doc("OBDBEgMQp6Z69BAYnDxc").update({
+      contactDetails:{
+        Name:"keshav" ,
+        Phone:"123456",
+        Email:"abcd@test.com"
+      }
+    }).then(()=>{
+      console.log("skin set!!!!!"); 
+    })
+  }
   render() { 
-    return ( <h1>Firebase Demo</h1> );
+    return (<button onClick={this.addData}>Add button</button>);
   }
 }
  
